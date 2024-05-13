@@ -1,0 +1,14 @@
+@use "../base/letProject.scss" as *;
+
+@mixin display-align-items() {
+  display: flex;
+  align-items: center;
+}
+@mixin BWHBR(
+    $themes : rgb(0, 81, 255)
+) {
+  background-color: $themes;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}

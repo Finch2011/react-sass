@@ -1,0 +1,42 @@
+@use "../base/letProject.scss" as * ;
+// backgrund
+body.purple{
+    background-color: $backgrund2;
+}
+.root.purple{
+    background-color: $backgrund2;
+}
+// end 
+// text-sapn 
+.sass-text.purple{
+    color: $text-span2;
+}
+// end 
+// button 
+.button-App.purple{
+    background-color: $button2;
+}
+.button-App.purple:hover{
+    background-color: transparent;
+}
+.User.purple{
+    background-color: $button2;
+}
+.button-buy.purple{
+    background-color: $button2;
+}
+.button-buy.purple:hover{
+    background-color: transparent;
+}
+.button-components.purple:hover{
+    background-color: transparent;
+}
+.button-components.purple {
+    background-color: $button2;
+}
+// end 
+// outer 
+li.purple:hover{
+    color: $button2;
+}
+// end 

@@ -1,0 +1,350 @@
+@use "./letProject.scss" as *;
+@use "../utils/mixin.scss" as *;
+
+// navbar
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-size: 19px;
+  margin-right: 40px;
+
+  li {
+    list-style: none;
+    color: $white;
+  }
+}
+li:hover{
+  color: $text-span;
+  transition: all ease-in-out 0.3s;
+}
+// end
+// main 
+body {
+  background-color: $backgrund;
+  padding: 2rem;
+
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+// end 
+
+// components 
+.img-root {
+  img {
+    width: 350px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+  }
+}
+
+.text-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .titel {
+    font-size: 23px;
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+  }
+
+  .price {
+    font-weight: 300;
+    font-size: 20px;
+    color: $white;
+  }
+}
+
+.main-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    background-color: $backgrund;
+    border-radius: 14px;
+    box-shadow: rgb(205, 205, 205) 5px 0px 25px;
+    margin-top: 50px;
+  }
+
+.button-components {
+  width: 150px;
+  height: 50px;
+  background-color: $button;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1s;
+  margin: 20px;
+}
+
+.button-components:hover {
+  background-color: transparent;
+  border: 1px solid $white;
+  color: $white;
+}
+
+
+.main-Prodects {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+
+.price-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  .lokaition-components {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lokaition-root {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+  }
+}
+
+// end 
+// App 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sass-text {
+  color:$text-span;
+}
+
+.welcom-text {
+  color: $white ;
+}
+
+.larnMore-text {
+  color: $white;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.button-App {
+  width: 100px;
+  height: 40px;
+  color: none;
+  background-color: $button;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.button-App:hover {
+  background-color: transparent;
+  border: 1px solid $white;
+  color: $white;
+}
+
+.main-App {
+  position: relative;
+}
+
+.User {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100px;
+  height: 300px;
+  background-color: $button;
+  position: absolute;
+  top: 50px;
+  left: -60px;
+  border-radius: 30px;
+  padding-top: 2rem;
+
+  .imges {
+    width: 30px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .imges:hover {
+    width: 20px;
+    transform: scale(1.3);
+    border: 1px solid $white;
+    box-shadow: 2px 2px 20px $white;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
+}
+
+// end 
+// NotFund Erore 
+.main404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: red;
+  }
+}
+
+// end 
+// buing 
+.main-buy{
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items:start;
+  gap: 400px;
+.buy{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  img{
+    width: 500px;
+    border-radius: 20px;
+  }
+  h1{
+    color: $white;
+  }
+  p{
+    color: $white;
+    font-size: 20px;
+  }
+}
+.price{
+  width: max-content;
+  height: max-content;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 14px;
+  background-color: #fff;
+  .larnMore-buy{
+    color: rgb(153, 153, 153);
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .head-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1{
+    color: $white;
+  }
+  img{
+    border-radius: 3px;
+  }
+  .price-buy{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  }
+  .button-buy {
+    width: 100px;
+    height: 40px;
+    color: none;
+    background-color: $button;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s;
+  }
+  
+  .button-buy:hover {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+  }
+  .item{
+    max-width: max-content;
+    height: max-content;
+    background-color: #646cff;
+    padding: 1rem;
+    border-radius: 10px;
+    .r-item{
+      display: flex;
+      justify-content:start;
+      align-items: center;
+      h2{
+        color: rgb(255, 255, 255);
+      }
+    }
+    .rb-item{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+  .setcolor{
+    @include display-align-items ;
+    gap: 10px;
+    .color-blue{
+      @include BWHBR;
+    }
+    .color-red{
+      @include BWHBR($themes : rgb(189, 14, 14));
+    }
+    .color-yellow{
+      @include BWHBR($themes : yellow);
+    }
+  }
+}
+}
+// end 
