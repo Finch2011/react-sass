@@ -29,7 +29,7 @@ function Buy({ ImgeSrc, Titel, Price }) {
             <h2>stors</h2>
             <img src="./icons8-buying.gif" alt="" />
             </div>
-            <div className="item">
+            <div className="item prpel">
                 
             <div className="r-item">
                 <h2>DigeKala</h2>

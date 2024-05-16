@@ -1,7 +1,19 @@
-ul {
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-buy .price .item .rb-item, .main404, .App, .price-root .lokaition-root, .main-Prodects, .root, .main-root, .text-root, ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+ul {
   gap: 25px;
   font-size: 19px;
   margin-right: 40px;
@@ -16,28 +28,23 @@ li:hover {
   transition: all ease-in-out 0.3s;
 }
 
+hr {
+  border: 1px solid #fff;
+}
+
 body {
   background-color: rgb(79, 98, 204);
   padding: 2rem;
 }
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 a {
   font-weight: 500;
-  color: #646cff;
+  color: rgb(0, 132, 255);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: rgb(174, 18, 213);
 }
 
 h1 {
@@ -52,10 +59,7 @@ h1 {
 }
 
 .text-root {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
 }
 .text-root .titel {
@@ -70,17 +74,8 @@ h1 {
   color: white;
 }
 
-.main-root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .root {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: max-content;
   height: max-content;
   background-color: rgb(79, 98, 204);
@@ -109,10 +104,7 @@ h1 {
 .main-Prodects {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 23px;
 }
 
@@ -127,18 +119,12 @@ h1 {
   height: 20px;
 }
 .price-root .lokaition-root {
-  display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
   color: white;
 }
 
 .App {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .sass-text {
@@ -205,13 +191,13 @@ h1 {
 }
 
 .main404 {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .main404 h1 {
-  color: red;
+  color: rgb(47, 0, 255);
+}
+.main404 .GoToHome {
+  font-size: 19px;
 }
 
 .main-buy {
@@ -299,10 +285,7 @@ h1 {
   color: rgb(255, 255, 255);
 }
 .main-buy .price .item .rb-item {
-  display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
   gap: 40px;
 }
 .main-buy .price .setcolor {

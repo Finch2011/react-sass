@@ -5,7 +5,7 @@ function notfund() {
   return (
     <div className='main404'>
     <h1> <span className='h1'>Erore</span> 404 🤦‍♂️</h1>
-    <Link to={"/"}>Go To Home</Link>
+    <p className='GoToHome'><Link to={"/"}>Go To Home</Link></p>
     </div>
   )
 }

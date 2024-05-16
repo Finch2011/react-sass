@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-function Product({ImgeSrc , Titel , Price}) {
+function Product({ImgeSrc , Titel , Price, contry}) {
   return (
     <>
     <div className="main-root" >
@@ -12,7 +12,7 @@ function Product({ImgeSrc , Titel , Price}) {
         <div className="price-root">
         <p className="price">{Price}$</p>
         <div className="lokaition-root">
-          <p>USA</p>
+          <p>{contry}</p>
           <img className="lokaition-components" src="/icons8-location-100.png" alt="" />
           </div>
         </div>
@@ -22,7 +22,7 @@ function Product({ImgeSrc , Titel , Price}) {
     </div>
     </>
 
-  )
+  )  
 }
 
 export default Product

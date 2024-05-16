@@ -1,32 +1,5 @@
 @use "./letProject.scss" as *;
 @use "../utils/mixin.scss" as *;
-
-// navbar
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  font-size: 19px;
-  margin-right: 40px;
-
-  li {
-    list-style: none;
-    color: $white;
-  }
-}
-li:hover{
-  color: $text-span;
-  transition: all ease-in-out 0.3s;
-}
-// end
-// main 
-body {
-  background-color: $backgrund;
-  padding: 2rem;
-
-}
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -36,25 +9,58 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// default code for project
+%display-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// end
+// navbar
+ul {
+  @extend %display-flex-center;
+  gap: 25px;
+  font-size: 19px;
+  margin-right: 40px;
+
+  li {
+    list-style: none;
+    color: $white;
+  }
+}
+li:hover {
+  color: $text-span;
+  transition: all ease-in-out 0.3s;
+}
+
+hr {
+  border: 1px solid #fff;
+}
+// end
+// main
+body {
+  background-color: $backgrund;
+  padding: 2rem;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: $text-span;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: $text-span2;
 }
-
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-// end 
+// end
 
-// components 
+// components
 .img-root {
   img {
     width: 350px;
@@ -64,10 +70,8 @@ h1 {
 }
 
 .text-root {
-  display: flex;
+  @extend %display-flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
 
   .titel {
@@ -85,23 +89,19 @@ h1 {
 }
 
 .main-root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %display-flex-center;
 }
 
-  .root {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: max-content;
-    height: max-content;
-    background-color: $backgrund;
-    border-radius: 14px;
-    box-shadow: rgb(205, 205, 205) 5px 0px 25px;
-    margin-top: 50px;
-  }
+.root {
+  @extend %display-flex-center;
+  flex-direction: column;
+  width: max-content;
+  height: max-content;
+  background-color: $backgrund;
+  border-radius: 14px;
+  box-shadow: rgb(205, 205, 205) 5px 0px 25px;
+  margin-top: 50px;
+}
 
 .button-components {
   width: 150px;
@@ -120,14 +120,11 @@ h1 {
   color: $white;
 }
 
-
 .main-Prodects {
+  @extend %display-flex-center;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 23px;
 }
 
@@ -143,29 +140,25 @@ h1 {
   }
 
   .lokaition-root {
-    display: flex;
+    @extend %display-flex-center;
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
     color: $white;
   }
 }
 
-// end 
-// App 
+// end
+// App
 .App {
-  display: flex;
+  @extend %display-flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .sass-text {
-  color:$text-span;
+  color: $text-span;
 }
 
 .welcom-text {
-  color: $white ;
+  color: $white;
 }
 
 .larnMore-text {
@@ -223,128 +216,127 @@ h1 {
     border-radius: 15px;
     padding: 5px;
   }
-
 }
 
-// end 
-// NotFund Erore 
+// end
+// NotFund Erore
+
 .main404 {
-  display: flex;
+  @extend %display-flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   h1 {
-    color: red;
+    color: rgb(47, 0, 255);
   }
+  .GoToHome {
+    font-size: 19px;
+  }
+
 }
 
-// end 
-// buing 
-.main-buy{
+// end
+// buing
+.main-buy {
   max-width: 1200px;
   margin: 50px auto;
   display: flex;
   flex-direction: row-reverse;
-  align-items:start;
+  align-items: start;
   gap: 400px;
-.buy{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  
-  img{
-    width: 500px;
-    border-radius: 20px;
-  }
-  h1{
-    color: $white;
-  }
-  p{
-    color: $white;
-    font-size: 20px;
-  }
-}
-.price{
-  width: max-content;
-  height: max-content;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  border-radius: 14px;
-  background-color: #fff;
-  .larnMore-buy{
-    color: rgb(153, 153, 153);
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .head-price{
+  .buy {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+      width: 500px;
+      border-radius: 20px;
+    }
+    h1 {
+      color: $white;
+    }
+    p {
+      color: $white;
+      font-size: 20px;
+    }
   }
-  h1{
-    color: $white;
-  }
-  img{
-    border-radius: 3px;
-  }
-  .price-buy{
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-  }
-  .button-buy {
-    width: 100px;
-    height: 40px;
-    color: none;
-    background-color: $button;
-    font-weight: 500;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 1s;
-  }
-  
-  .button-buy:hover {
-    background-color: transparent;
-    border: 1px solid rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-  }
-  .item{
-    max-width: max-content;
+  .price {
+    width: max-content;
     height: max-content;
-    background-color: #646cff;
-    padding: 1rem;
-    border-radius: 10px;
-    .r-item{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 14px;
+    background-color: #fff;
+    .larnMore-buy {
+      color: rgb(153, 153, 153);
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .head-price {
       display: flex;
-      justify-content:start;
+      justify-content: space-between;
       align-items: center;
-      h2{
-        color: rgb(255, 255, 255);
+    }
+    h1 {
+      color: $white;
+    }
+    img {
+      border-radius: 3px;
+    }
+    .price-buy {
+      color: rgb(255, 255, 255);
+      font-weight: 500;
+    }
+    .button-buy {
+      width: 100px;
+      height: 40px;
+      color: none;
+      background-color: $button;
+      font-weight: 500;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 1s;
+    }
+
+    .button-buy:hover {
+      background-color: transparent;
+      border: 1px solid rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+    }
+    .item {
+      max-width: max-content;
+      height: max-content;
+      background-color: #646cff;
+      padding: 1rem;
+      border-radius: 10px;
+      .r-item {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        h2 {
+          color: rgb(255, 255, 255);
+        }
+      }
+      .rb-item {
+        @extend %display-flex-center;
+        flex-direction: row-reverse;
+        gap: 40px;
       }
     }
-    .rb-item{
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-    }
-  }
-  .setcolor{
-    @include display-align-items ;
-    gap: 10px;
-    .color-blue{
-      @include BWHBR;
-    }
-    .color-red{
-      @include BWHBR($themes : rgb(189, 14, 14));
-    }
-    .color-yellow{
-      @include BWHBR($themes : yellow);
+    .setcolor {
+      @include display-align-items;
+      gap: 10px;
+      .color-blue {
+        @include BWHBR;
+      }
+      .color-red {
+        @include BWHBR($themes: rgb(189, 14, 14));
+      }
+      .color-yellow {
+        @include BWHBR($themes: yellow);
+      }
     }
   }
 }
-}
-// end 
+// end
