@@ -127,6 +127,10 @@ h1 {
   flex-direction: column;
 }
 
+.craeteNumber {
+  color: white;
+}
+
 .sass-text {
   color: rgb(0, 132, 255);
 }
